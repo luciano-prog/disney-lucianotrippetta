@@ -1,1 +1,0 @@
-json.pelicula @pelicula, :id, :titulo, :calificacion

@@ -4,9 +4,9 @@
 # are locale specific, and you may define rules for as many different
 # locales as you wish. All of these examples are active by default:
 ActiveSupport::Inflector.inflections(:en) do |inflect|
-   inflect.irregular 'personaje', 'personajes'
-   inflect.irregular 'pelicula', 'peliculas'
-   inflect.irregular 'genero', 'generos'
+   inflect.irregular 'character', 'characters'
+   inflect.irregular 'movie', 'movies'
+   inflect.irregular 'gender', 'genders'
  end
 
 # These inflection rules are supported but not enabled by default:

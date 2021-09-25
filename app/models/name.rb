@@ -6,5 +6,6 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Nombre < ApplicationRecord
+class name < ApplicationRecord
+
 end

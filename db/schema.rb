@@ -12,36 +12,60 @@
 
 ActiveRecord::Schema.define(version: 2021_09_13_120333) do
 
-  create_table "generos", force: :cascade do |t|
-    t.string "nombre"
+  create_table "genders", force: :cascade do |t|
+
+    t.string "name"
+
     t.datetime "created_at", precision: 6, null: false
+
     t.datetime "updated_at", precision: 6, null: false
+
   end
 
-  create_table "nombres", force: :cascade do |t|
+  create_table "names", force: :cascade do |t|
+
     t.datetime "created_at", precision: 6, null: false
+
     t.datetime "updated_at", precision: 6, null: false
+
   end
 
-  create_table "peliculas", force: :cascade do |t|
-    t.string "titulo"
-    t.integer "calificacion"
-    t.string "personaje"
+  create_table "movies", force: :cascade do |t|
+
+    t.string "title"
+
+    t.integer "calification"
+
+    t.string "character"
+
     t.datetime "created_at", precision: 6, null: false
+
     t.datetime "updated_at", precision: 6, null: false
+
   end
 
-  create_table "personajes", force: :cascade do |t|
-    t.string "nombre"
-    t.integer "edad"
-    t.integer "peso"
-    t.text "historia"
-    t.string "peliculas"
+  create_table "characters", force: :cascade do |t|
+
+    t.string "name"
+
+    t.integer "age"
+
+    t.integer "weigth"
+
+    t.text "history"
+
+    t.string "movies"
+
     t.datetime "created_at", precision: 6, null: false
+
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "pelicula_id", null: false
-    t.index ["pelicula_id"], name: "index_personajes_on_pelicula_id"
+
+    t.integer "movie_id", null: false
+
+    t.index ["movie_id"], name: "index_characters_on_movie_id"
+    
   end
 
-  add_foreign_key "personajes", "peliculas"
+  add_foreign_key "characters", "movies"
+  
 end

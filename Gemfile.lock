@@ -123,12 +123,12 @@ GEM
     nokogiri (1.12.4-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    paranoia (2.4.3)
+      activerecord (>= 4.0, < 6.2)
     puma (5.4.0)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-cors (1.1.1)
-      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.4.1)
@@ -194,15 +194,13 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   annotate
-  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
   byebug
-  devise
   devise-jwt
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  paranoia (~> 2.2)
   puma (~> 5.0)
-  rack-cors
   rails (~> 6.1.4, >= 6.1.4.1)
   spring
   sqlite3 (~> 1.4)

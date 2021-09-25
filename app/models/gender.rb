@@ -7,6 +7,8 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Genero < ApplicationRecord
-	belongs_to :pelicula
+class Genre < ApplicationRecord
+
+	belongs_to :movie
+
 end

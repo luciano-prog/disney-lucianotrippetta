@@ -20,6 +20,8 @@
 #
 #  pelicula_id  (pelicula_id => peliculas.id)
 #
-class Personaje < ApplicationRecord
-	belongs_to :pelicula
+class Character < ApplicationRecord
+
+	belongs_to :movie
+	
 end

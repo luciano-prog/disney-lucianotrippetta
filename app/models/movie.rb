@@ -9,9 +9,11 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
-class Pelicula < ApplicationRecord
-	has_many :personajes
-	has_many :generos
+class Movie < ApplicationRecord
+
+	has_many :characters
+	
+	has_many :genders
 
 	scopes -- named scopes
 
@@ -19,7 +21,7 @@ class Pelicula < ApplicationRecord
 		where(delete_at: nil)
 	}
 
-	validates :titulo, 
+	validates :title, presence: true 
 
 	def soft_destroy
 		update(deleted_at: Time.now)
